@@ -14,7 +14,7 @@ string pilih2;
 int anak;//jumlah anak
 int anak_anak;//tunjangan anak
 int pajak;
-pajak=(0.75*(gaji+makan+istri+anak_anak));//pajak=75% gaji 
+int total;
 
 	cout<<"TUGAS MATA KULIAH DASAR PEMOGRAMAN (SISTEM PENGGAJIAN)"<<"\n\n";
 	
@@ -42,7 +42,7 @@ pajak=(0.75*(gaji+makan+istri+anak_anak));//pajak=75% gaji
 		return (0);
 	}
 	
-	cout<<"Jumlah Hari Masuk Kerja	: ";//30 hari kurangi weekend = 22 hari (maksimal full kerja)
+	cout<<"Jumlah Hari Masuk Kerja	 : ";//30 hari kurangi weekend = 22 hari (maksimal full kerja)
 	cin>>hari;
 	if (hari<0&&hari>22) {
 		cout<<"Mohon Masukkan Data yang Sesuai"<<"\n";
@@ -92,12 +92,12 @@ pajak=(0.75*(gaji+makan+istri+anak_anak));//pajak=75% gaji
 		return (0);
 	}
 	cout<<"\n";
-		
-	cout<<"Total Gaji	: "<<gaji+makan+istri+anak_anak<<"\n";
-
-	cout<<"Pajak	: "<<pajak<<"\n\n";
 	
-	cout<<"Gaji yang Diterima	: "<<gaji+makan+istri+anak_anak-pajak<<"\n";
+	total=gaji+makan+istri+anak_anak;
+	pajak=0.075*total;//pajak=7,5% gaji 	
+	cout<<"Total Gaji	: "<<total<<"\n";
+	cout<<"Pajak		: "<<pajak<<"\n\n";
+	cout<<"Gaji yang Diterima	: "<<total-pajak<<"\n";
 	
 	return (0);
 }
